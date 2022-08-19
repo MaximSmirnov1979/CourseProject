@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonalFinanceAccounting
 {
-    internal class Expenses
+    public class Expenses
     {
         private double value;
         private DateTime date;
