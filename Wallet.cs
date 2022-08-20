@@ -10,14 +10,22 @@ namespace PersonalFinanceAccounting
     {
         private string Currency { get;} //Валюта
         private double Value { get; set; } //Кол-во денег на счету
-        private List<Expenses> expenses; //Расходы
-        private List<Profit> profit; //Доходы
-        public Wallet(string currency, List<Expenses> exp, List<Profit> prof, double value = 0)
+        private List<Expense> expenses; //Расходы
+        private List<Profit> profits; //Доходы
+        public Wallet(string currency, List<Expense> exp = null, List<Profit> prof = null, double value = 0)
         {
             this.Currency = currency;
             this.expenses = exp;
-            this.profit = prof;
+            this.profits = prof;
             this.Value = value;
+        }
+        void AddProfit(double value, DateTime date, string сategory)
+        {
+            this.profits.Append(new Profit(value, date, сategory));
+        }
+        void AddExpence(double value, DateTime date, string сategory)
+        {
+            this.expenses.Append(new Expense(value, date, сategory));
         }
         
     }

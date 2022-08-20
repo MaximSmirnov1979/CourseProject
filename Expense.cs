@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace PersonalFinanceAccounting
 {
-    public class Expenses
+    public class Expense
     {
         private double value { get; set; }
         private DateTime date { get; set; }
         private string сategory { get; set; }
 
-        public Expenses(double value, DateTime date, string сategory)
+        public Expense(double value, DateTime date, string сategory)
         {
             this.value = value;
             this.date = date;
             this.сategory = сategory;
         }
-        public Expenses() { }
+        public Expense() { }
     }
 }
